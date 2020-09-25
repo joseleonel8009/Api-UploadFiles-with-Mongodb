@@ -14,7 +14,7 @@ router.post('/', async(req, res)=>{
         name: filename
     });
     await fileUp.save();
-    res.send({ message: 'File Received' });
+    res.send({ message: 'File Received', filename: filename });
 });
 
 module.exports = router;
